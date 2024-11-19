@@ -154,7 +154,7 @@ main {
 .card {
 	display: flex;
 	flex-direction: column;
-	background: var(--fon);
+	background-color: #fff;
 	padding-bottom: 20px;
 
 	&__image {
@@ -192,6 +192,26 @@ main {
 		padding-top: 40px;
 	}
 
+	&__more {
+		padding: 14px;
+		background: var(--fon-2-na-serom);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-family: var(--font-family);
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 120%;
+		text-align: center;
+		color: var(--teks);
+		width: 100%;
+
+		&:hover {
+			background: var(--siniy);
+			color: #fff;
+		}
+	}
+
 	&__title {
 		font-family: var(--font-family);
 		font-weight: 500;
@@ -200,4 +220,21 @@ main {
 		color: #000;
 		margin-bottom: 15px;
 	}
+
+	p {
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 120%;
+		color: var(--zagolovok);
+		margin-bottom: 55px;
+	}
+
+	&__title.big {
+		font-size: 20px;
+	}
+}
+
+section {
+	padding: 90px 0;
 }

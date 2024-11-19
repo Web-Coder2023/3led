@@ -191,7 +191,7 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: var(--fon);
+  background-color: #fff;
   padding-bottom: 20px;
 }
 .card__image {
@@ -225,6 +225,30 @@ main {
   padding: 0 20px;
   padding-top: 40px;
 }
+.card__more {
+  padding: 14px;
+  background: var(--fon-2-na-serom);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+  text-align: center;
+  color: var(--teks);
+  width: 100%;
+}
+.card__more:hover {
+  background: var(--siniy);
+  color: #fff;
+}
 .card__title {
   font-family: var(--font-family);
   font-weight: 500;
@@ -232,6 +256,21 @@ main {
   line-height: 120%;
   color: #000;
   margin-bottom: 15px;
+}
+.card p {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  color: var(--zagolovok);
+  margin-bottom: 55px;
+}
+.card__title.big {
+  font-size: 20px;
+}
+
+section {
+  padding: 90px 0;
 }
 
 .header__container {
@@ -400,6 +439,7 @@ main {
 }
 .products__list li {
   max-width: 340px;
+  background: var(--fon);
 }
 .products__more {
   background: var(--fon-2-na-serom);
@@ -439,6 +479,21 @@ main {
 .products__more:hover {
   background-color: #fff;
   color: var(--siniy);
+}
+
+.objects {
+  background: var(--fon);
+}
+.objects__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 35px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid var(--cherta);
+}
+.objects__list .card__image {
+  height: 275px;
 }
 
 .footer {
