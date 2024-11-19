@@ -1,0 +1,128 @@
+.wrapper {
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+main {
+	flex: 1 1 auto;
+}
+
+._btn-siniy {
+	padding: 8px 19px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--siniy);
+	gap: 5px;
+
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 14px;
+	text-align: center;
+	color: #fff;
+	transition: all 0.4s ease-in-out 0s;
+
+	&:hover {
+		background-color: #0000FF;
+	}
+}
+
+._language {
+	position: relative;
+	min-width: 34px;
+	max-width: 34px;
+	min-height: 35px;
+	font-family: Arial, sans-serif;
+
+	&-select {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: #fff;
+		cursor: pointer;
+		text-align: center;
+		border: 1px solid var(--siniy);
+		height: 35px;
+		width: 100%;
+
+		font-family: var(--second-family);
+		font-weight: 400;
+		font-size: 14px;
+		text-align: center;
+		color: var(--siniy);
+	}
+
+	&-list {
+		list-style: none;
+		width: 30px;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		max-height: 0;
+		transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+		background-color: #fff;
+		border: 1px solid #ccc;
+		border-top: none;
+		position: absolute;
+		z-index: 10;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+		li {
+			padding: 10px;
+			text-align: center;
+			cursor: pointer;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			font-family: var(--second-family);
+			font-weight: 400;
+			font-size: 14px;
+			text-align: center;
+			color: var(--siniy);
+
+			&:hover {
+				background-color: #f7f7f7;
+			}
+		}
+	}
+}
+
+._logo {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+
+	&-title {
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 110%;
+		color: var(--zagolovok);
+	}
+}
+
+._label {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+
+	&-phone {
+		font-family: var(--font-family);
+		font-weight: 700;
+		font-size: 18px;
+		text-align: right;
+		color: #000;
+	}
+
+	span {
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 14px;
+		text-align: right;
+		color: var(--teks);
+	}
+}

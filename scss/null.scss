@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Onest:100,200,300,regular,500,600,700,800,900');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,regular,500,700,900');
+@import url('https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900');
+
+:root {
+	--krasnyy: #fd0303;
+	--zelenyy: #1cfb06;
+	--siniy: #1010f6;
+	--zagolovok: #9797a8;
+	--teks: #a6a6a6;
+	--fon: #f8f8f8;
+	--cherta: #eee;
+	--fon-2-na-serom: #ebebeb;
+}
+
+:root {
+	--font-family: "Onest", sans-serif;
+	--second-family: "Roboto", sans-serif;
+	--third-family: "Inter", sans-serif;
+}
+
+
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+:focus,
+:active {
+	outline: none;
+}
+
+a:focus,
+a:active {
+	outline: none;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+body {
+	line-height: 1;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+input,
+button,
+textarea {
+	font-family: inherit;
+	font-size: inherit;
+}
+
+button {
+	cursor: pointer;
+	color: inherit;
+	background-color: inherit;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+/*--------------------*/
+[class*="__container"] {
+	width: 90%;
+	max-width: 1060px;
+	margin: 0 auto;
+}
