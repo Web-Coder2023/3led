@@ -3,10 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/animate.css">
     <link rel="stylesheet" href="./css/null.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <title>3LED | Производитель LED светильников</title>
 </head>
 
@@ -91,13 +92,13 @@
         <main class="main">
             <section class="products">
                 <div class="products__container">
-                    <h2 class="_title">
+                    <h2 class="_title wow fadeInLeft" data-wow-duration="2s">
                         Продукция 3LED.RU <span>|</span>
                     </h2>
 
                     <ul class="products__list">
                         <!-- Карточка продукции 1 -->
-                        <li class="card">
+                        <li class="card  wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0s">
                             <div class="card__image">
                                 <img src="./img/p1.png" alt="">
                                 <label>324 позиций</label>
@@ -118,7 +119,7 @@
                             </div>
                         </li>
                         <!-- Карточка продукции 2 -->
-                        <li class="card">
+                        <li class="card  wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.3s">
                             <div class="card__image">
                                 <img src="./img/p1.png" alt="">
                                 <label>324 позиций</label>
@@ -139,7 +140,7 @@
                             </div>
                         </li>
                         <!-- Карточка продукции 3 -->
-                        <li class="card">
+                        <li class="card  wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.6s">
                             <div class="card__image">
                                 <img src="./img/p1.png" alt="">
                                 <label>324 позиций</label>
@@ -160,7 +161,7 @@
                             </div>
                         </li>
                     </ul>
-                    <a href="#!" class="_label-view">
+                    <a href="#!" class="_label-view wow fadeInLeft" data-wow-duration="2s">
                         <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M13 22.75C18.3848 22.75 22.75 18.3848 22.75 13C22.75 7.61522 18.3848 3.25 13 3.25C7.61522 3.25 3.25 7.61522 3.25 13C3.25 18.3848 7.61522 22.75 13 22.75Z"
@@ -174,12 +175,12 @@
             </section>
             <section class="objects">
                 <div class="objects__container">
-                    <h2 class="_title">
+                    <h2 class="_title wow fadeInLeft" data-wow-duration="2s">
                         Наши объекты <span>|</span>
                     </h2>
                     <ul class="objects__list">
                         <!-- Объект 1 -->
-                        <li class="card">
+                        <li class="card  wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0s">
                             <div class="card__image">
                                 <img src="./img/o1.png" alt="">
                             </div>
@@ -198,7 +199,7 @@
                             </div>
                         </li>
                         <!-- Объект 2 -->
-                        <li class="card">
+                        <li class="card  wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.3s">
                             <div class="card__image">
                                 <img src="./img/o1.png" alt="">
                             </div>
@@ -217,7 +218,7 @@
                             </div>
                         </li>
                         <!-- Объект 3 -->
-                        <li class="card">
+                        <li class="card  wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0s">
                             <div class="card__image">
                                 <img src="./img/o1.png" alt="">
                             </div>
@@ -236,7 +237,7 @@
                             </div>
                         </li>
                         <!-- Объект 4 -->
-                        <li class="card">
+                        <li class="card  wow fadeInLeft" data-wow-duration="1.5s" data-wow-delay="0.3s">
                             <div class="card__image">
                                 <img src="./img/o1.png" alt="">
                             </div>
@@ -255,7 +256,7 @@
                             </div>
                         </li>
                     </ul>
-                    <a href="#!" class="_label-view">
+                    <a href="#!" class="_label-view wow fadeInLeft" data-wow-duration="2s">
                         <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M13 22.75C18.3848 22.75 22.75 18.3848 22.75 13C22.75 7.61522 18.3848 3.25 13 3.25C7.61522 3.25 3.25 7.61522 3.25 13C3.25 18.3848 7.61522 22.75 13 22.75Z"
@@ -271,6 +272,12 @@
 
         <footer class="footer"></footer>
     </div>
+    <!-- Скрипт анимации -->
+    <script src="./js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+    <!-- Плавный скролл по сайту -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"
         integrity="sha256-huW7yWl7tNfP7lGk46XE+Sp0nCotjzYodhVKlwaNeco=" crossorigin="anonymous"></script>
     <script>
@@ -302,6 +309,7 @@
             touchpadSupport: true,
         })
     </script>
+    <!-- Мои скриптыы -->
     <script src="./js/script.js"></script>
 </body>
 
