@@ -1,0 +1,35 @@
+.about {
+    background: var(--fon);
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    p {
+        max-width: 360px;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 140%;
+        color: var(--teks);
+    }
+
+    &__box {
+        display: flex;
+        gap: 24px;
+
+        .footer__logo {
+            width: 46px;
+            height: 46px;
+        }
+
+        div {
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 35px;
+            line-height: 110%;
+            color: var(--zagolovok);
+        }
+    }
+}
