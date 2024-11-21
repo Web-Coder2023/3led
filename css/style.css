@@ -420,7 +420,8 @@ section {
 }
 
 .home {
-  background: url("../img/bg1.png") center bottom/cover no-repeat;
+  -webkit-transition: background 0.2s ease;
+  transition: background 0.2s ease;
 }
 .home__slider {
   background: rgba(0, 0, 0, 0.25);

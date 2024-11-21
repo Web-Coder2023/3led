@@ -54,14 +54,33 @@ searchInput.addEventListener('keypress', (e) => {
     }
 });
 
-const swiper = new Swiper('.swiper', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
+document.addEventListener("DOMContentLoaded", () => {
+    const homeSection = document.getElementById("home");
+    const slides = document.querySelectorAll(".home__slider-slide");
 
-    // Navigation arrows
-    navigation: {
-        nextEl: '.next',
-        prevEl: '.prev',
-    },
+    // Функция для изменения фона
+    const updateBackground = (slide) => {
+        const background = slide.dataset.background;
+        if (background) {
+            homeSection.style.background = `${background} center bottom/cover no-repeat`;
+        }
+    };
+
+    // Инициализация Swiper
+    const swiper = new Swiper(".swiper", {
+        loop: true, // Для бесконечного прокручивания
+        navigation: {
+            nextEl: ".home__slider-btn.next",
+            prevEl: ".home__slider-btn.prev",
+        },
+        on: {
+            slideChange: function () {
+                const activeSlide = slides[this.realIndex]; // Получаем текущий слайд
+                updateBackground(activeSlide);
+            },
+        },
+    });
+
+    // Устанавливаем фон для первого слайда
+    updateBackground(slides[0]);
 });
