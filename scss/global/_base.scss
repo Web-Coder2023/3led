@@ -91,20 +91,6 @@ main {
 	}
 }
 
-._logo {
-	display: flex;
-	align-items: center;
-	gap: 8px;
-
-	&-title {
-		font-family: var(--font-family);
-		font-weight: 400;
-		font-size: 14px;
-		line-height: 110%;
-		color: var(--zagolovok);
-	}
-}
-
 ._label {
 	display: flex;
 	flex-direction: column;

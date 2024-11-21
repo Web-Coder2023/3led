@@ -5,7 +5,26 @@
         justify-content: space-between;
         padding: 15px 0;
     }
-
+&__logo {
+    display: flex;
+    flex-direction: column;
+    max-width: 220px;
+    gap: 7px;
+    a {
+        width: 100%;
+        display: block;
+        img {
+            width: 100%;
+        }
+    }
+    &-title {
+		font-family: var(--font-family);
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 110%;
+		color: var(--zagolovok);
+	}
+}
     &__social {
         display: flex;
         flex-direction: column;
@@ -22,16 +41,6 @@
             display: flex;
             align-items: center;
             gap: 10px;
-        }
-
-        &-arround {
-            border-radius: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 30px;
-            height: 30px;
-            background-color: var(--cherta);
         }
     }
 
