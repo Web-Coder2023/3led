@@ -53,22 +53,43 @@ searchInput.addEventListener('keypress', (e) => {
         searchButton.click();
     }
 });
-
 document.addEventListener("DOMContentLoaded", () => {
     const homeSection = document.getElementById("home");
     const slides = document.querySelectorAll(".home__slider-slide");
+    const homeBgContainer = document.querySelector(".home__bg"); // Блок с изображениями
+    const homeBgImages = homeBgContainer.querySelectorAll("img"); // Все изображения в контейнере
 
     // Функция для изменения фона
     const updateBackground = (slide) => {
-        const background = slide.dataset.background;
+        const background = slide.dataset.background; // Получаем путь из data-background
         if (background) {
-            homeSection.style.background = `${background} center bottom/cover no-repeat`;
+            // Проверяем, есть ли текущее изображение с классом visible
+            const visibleImg = homeBgContainer.querySelector(".visible");
+            let newImg = homeBgContainer.querySelector("img:not(.visible)");
+
+            // Если не существует скрытого изображения, создаем новое
+            if (!newImg) {
+                newImg = document.createElement("img");
+                newImg.src = background;
+                homeBgContainer.appendChild(newImg);
+            }
+
+            // Если существует видимое изображение, скрываем его
+            if (visibleImg) {
+                visibleImg.classList.remove("visible");
+            }
+
+            // Обновляем путь и показываем новое изображение после его загрузки
+            newImg.src = background;
+            newImg.onload = () => {
+                newImg.classList.add("visible"); // Появляется новое изображение
+            };
         }
     };
 
     // Инициализация Swiper
     const swiper = new Swiper(".swiper", {
-        loop: true, // Для бесконечного прокручивания
+        speed: 600,
         navigation: {
             nextEl: ".home__slider-btn.next",
             prevEl: ".home__slider-btn.prev",

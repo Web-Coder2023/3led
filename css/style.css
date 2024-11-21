@@ -267,6 +267,10 @@ section {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 15px 0;
+  -webkit-transition: top 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: top 0.3s ease, -webkit-box-shadow 0.3s ease;
+  transition: top 0.3s ease, box-shadow 0.3s ease;
+  transition: top 0.3s ease, box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
 }
 .header__logo {
   display: -webkit-box;
@@ -420,8 +424,9 @@ section {
 }
 
 .home {
-  -webkit-transition: background 0.2s ease;
-  transition: background 0.2s ease;
+  -webkit-transition: background 0.6s ease;
+  transition: background 0.6s ease;
+  position: relative;
 }
 .home__slider {
   background: rgba(0, 0, 0, 0.25);
@@ -498,6 +503,30 @@ section {
 }
 .home__slider-btn.next {
   right: 6px;
+}
+.home__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.home__bg img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center bottom;
+     object-position: center bottom;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: opacity 2s ease-in-out;
+  transition: opacity 2s ease-in-out;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.home__bg img.visible {
+  opacity: 1;
 }
 
 .products__list {
