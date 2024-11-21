@@ -420,7 +420,7 @@ section {
 }
 
 .home {
-  background: url("../../img/bg1.png") center bottom/cover no-repeat;
+  background: url("../img/bg1.png") center bottom/cover no-repeat;
 }
 .home__slider {
   background: rgba(0, 0, 0, 0.25);
