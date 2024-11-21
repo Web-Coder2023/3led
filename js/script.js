@@ -53,3 +53,15 @@ searchInput.addEventListener('keypress', (e) => {
         searchButton.click();
     }
 });
+
+const swiper = new Swiper('.swiper', {
+    // Optional parameters
+    direction: 'horizontal',
+    loop: true,
+
+    // Navigation arrows
+    navigation: {
+        nextEl: '.next',
+        prevEl: '.prev',
+    },
+});

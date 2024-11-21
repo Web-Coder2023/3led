@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="./css/animate.css">
     <link rel="stylesheet" href="./css/null.css">
     <link rel="stylesheet" href="./css/style.css">
@@ -140,6 +142,55 @@
         </header>
 
         <main class="main">
+            <section class="home wow fadeIn">
+                <div class="home__container">
+                    <div class="home__slider swiper">
+                        <div class="home__slider-wrapper swiper-wrapper">
+                            <div class="home__slider-slide swiper-slide">
+                                <div class="home__slider-slide_body">
+                                    <span>Более 15 лет на рынке</span>
+                                    <h2>
+                                        Архитектурные светильники для вашего дома
+                                    </h2>
+                                    <a href="#!" class="_btn-siniy">Перейти в каталог</a>
+                                </div>
+                            </div>
+                            <div class="home__slider-slide swiper-slide">
+                                <div class="home__slider-slide_body">
+                                    <span>Более 15 лет на рынке</span>
+                                    <h2>
+                                        Архитектурные светильники для вашего дома
+                                    </h2>
+                                    <a href="#!" class="_btn-siniy">Перейти в каталог</a>
+                                </div>
+                            </div>
+                            <div class="home__slider-slide swiper-slide">
+                                <div class="home__slider-slide_body">
+                                    <span>Более 15 лет на рынке</span>
+                                    <h2>
+                                        Архитектурные светильники для вашего дома
+                                    </h2>
+                                    <a href="#!" class="_btn-siniy">Перейти в каталог</a>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="home__slider-btn next">
+                            <svg width="7" height="14" viewBox="0 0 7 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0.75 12.625L6.375 7L0.75 1.375" stroke="black" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                        <button class="home__slider-btn prev">
+                            <svg width="7" height="14" viewBox="0 0 7 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M6.25 12.625L0.625 7L6.25 1.375" stroke="black" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </section>
             <section class="products">
                 <div class="products__container">
                     <h2 class="_title wow fadeInLeft" data-wow-duration="2s">
@@ -322,6 +373,10 @@
 
         <footer class="footer"></footer>
     </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <!-- Скрипт анимации -->
     <script src="./js/wow.min.js"></script>
     <script>
