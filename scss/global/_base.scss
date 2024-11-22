@@ -9,7 +9,13 @@
 main {
 	flex: 1 1 auto;
 }
-
+._img {
+	img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}
 ._btn-siniy {
 	padding: 8px 19px;
 	display: flex;
