@@ -89,6 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Инициализация Swiper
     const swiper = new Swiper(".swiper", {
+        loop: true,
         speed: 600,
         navigation: {
             nextEl: ".home__slider-btn.next",
@@ -96,12 +97,11 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         on: {
             slideChange: function () {
-                const activeSlide = slides[this.realIndex]; // Получаем текущий слайд
+                const activeSlide = slides[this.realIndex];
                 updateBackground(activeSlide);
             },
         },
     });
 
-    // Устанавливаем фон для первого слайда
     updateBackground(slides[0]);
 });
