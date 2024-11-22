@@ -1,0 +1,20 @@
+.widget-contact {
+    ul {
+        margin-top: 40px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        li {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 200%;
+            color: var(--teks);
+            a {
+                text-decoration: underline;
+                text-decoration-skip-ink: none;
+                color: var(--teks);
+            }
+        }
+    }
+}
