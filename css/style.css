@@ -520,6 +520,8 @@ section {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    max-width: 550px;
+    width: 100%;
   }
   .header__container.bottom .header__social {
     display: -webkit-box;
