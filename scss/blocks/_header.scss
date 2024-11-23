@@ -54,14 +54,32 @@
         display: flex;
         gap: 20px;
 
+        .header__social {
+            display: none;
+        }
+
         ._label {
             margin-right: 21px;
         }
     }
 
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        width: 100%;
+    }
+
     &__container.top {
         padding: 25px 0;
         border-bottom: 1px solid var(--cherta);
+    }
+
+    &__container.bottom {
+        ._label {
+            display: none;
+        }
+
     }
 
     &__search {
@@ -92,6 +110,15 @@
         }
     }
 
+    &__container.bottom {
+        .header__social {
+            display: none;
+
+            h2 {
+                display: none;
+            }
+        }
+    }
 
 }
 
@@ -99,6 +126,7 @@
     display: flex;
     align-items: center;
     height: 100%;
+    width: 100%;
 
     &__icon {
         display: none;
@@ -106,6 +134,10 @@
 
     &__body {
         height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
     }
 
     &__list {
@@ -120,5 +152,173 @@
                 color: var(--zagolovok);
             }
         }
+    }
+
+    &__box {
+        display: none;
+    }
+}
+
+@media (max-width: 992px) {
+    .header {
+        &__social {
+            display: none;
+        }
+
+        &__wrap {
+            .header__social {
+                h2 {
+                    display: none;
+                }
+
+                display: block;
+            }
+        }
+
+        &__container.top {
+            ._label {
+                display: none;
+            }
+        }
+
+        &__container.bottom {
+            ._label {
+                display: flex;
+            }
+
+            .header__search {
+                display: none;
+            }
+
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        display: flex;
+position: relative;
+        &__container.bottom {
+            overflow-y: scroll;
+            transition: left 0.6s ease-in-out 0s;
+            position: absolute;
+            left: -100%;
+            top: 100%;
+            width: 100%;
+            z-index: 100100000000000;
+            background-color: #fff;
+            height: 490px;
+            align-items: flex-start;
+            padding: 0;
+
+            ._label {
+                align-items: center;
+            }
+
+            .header__search {
+                display: flex;
+            }
+
+            .header__social {
+                h2 {
+                    display: block;
+                }
+
+                display: flex;
+            }
+        }
+        
+        &__wrapper {
+            align-items: center;
+            padding: 50px 0;
+        }
+        
+        &__container.bottom.open {
+            left: 0;
+        }
+        
+        &__wrap {
+            .header__social {
+                display: none;
+            }
+        }
+
+        .header__container.top ._btn-siniy,
+        .header__container.top ._language {
+            display: none;
+        }
+
+        &__search {
+            &-btn {
+                display: none;
+            }
+        }
+    }
+
+    .menu {
+        width: 90%;
+        margin: 0 auto;
+
+        &__body {
+            flex-direction: column;
+            height: 100%;
+            gap: 30px;
+        }
+
+        &__list {
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+        }
+
+        &__icon {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            width: 30px;
+            justify-content: center;
+
+            span {
+                transition: transform 0.5s ease-in-out 0s;
+                display: block;
+                width: 100%;
+                height: 2px;
+                border-radius: 5px;
+                background: var(--siniy);
+
+                &:nth-child(2) {
+                    width: 80%;
+                }
+            }
+        }
+
+        &__icon.open {
+            position: relative;
+
+            span {
+                position: absolute;
+
+                &:first-child {
+                    transform: rotate(45deg);
+                }
+
+                &:last-child {
+                    transform: rotate(-45deg);
+                }
+
+                &:nth-child(2) {
+                    display: none;
+                }
+            }
+        }
+
+        &__box {
+            display: flex;
+            gap: 8px;
+        }
+    }
+
+    .home__link {
+        display: none;
     }
 }

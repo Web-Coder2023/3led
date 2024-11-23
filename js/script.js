@@ -105,3 +105,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateBackground(slides[0]);
 });
+const menuIcon = document.querySelector('.menu__icon'),
+body = document.querySelector('body'),
+headerContainerBottom = document.querySelector('.header__container.bottom');
+menuIcon.addEventListener('click', () => {
+    menuIcon.classList.toggle('open');
+    body.classList.toggle('lock');
+    headerContainerBottom.classList.toggle('open');
+})
