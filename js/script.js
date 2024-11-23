@@ -1,36 +1,41 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const languageSelector = document.getElementById("languageSelector");
-    const languageList = document.getElementById("languageList");
+    const languageSelectors = document.querySelectorAll("._language-select");
+    const languageLists = document.querySelectorAll("._language-list");
 
-    // Переключение раскрытия списка
-    languageSelector.addEventListener("click", () => {
-        const isOpen = languageList.style.maxHeight && languageList.style.maxHeight !== "0px";
+    languageSelectors.forEach((languageSelector, index) => {
+        const languageList = languageLists[index];
 
-        if (isOpen) {
-            // Закрыть список
-            languageList.style.maxHeight = "0px";
-        } else {
-            // Открыть список: вычисляем высоту контента
-            languageList.style.maxHeight = `${languageList.scrollHeight}px`;
-        }
-    });
+        // Переключение раскрытия списка
+        languageSelector.addEventListener("click", () => {
+            const isOpen = languageList.style.maxHeight && languageList.style.maxHeight !== "0px";
 
-    // Обработка выбора языка
-    languageList.addEventListener("click", (event) => {
-        if (event.target.tagName === "LI") {
-            const selectedLanguage = event.target.dataset.lang;
-            languageSelector.textContent = selectedLanguage;
+            if (isOpen) {
+                // Закрыть список
+                languageList.style.maxHeight = "0px";
+            } else {
+                // Открыть список: вычисляем высоту контента
+                languageList.style.maxHeight = `${languageList.scrollHeight}px`;
+            }
+        });
 
-            // Закрыть список
-            languageList.style.maxHeight = "0px";
-        }
+        // Обработка выбора языка
+        languageList.addEventListener("click", (event) => {
+            if (event.target.tagName === "LI") {
+                const selectedLanguage = event.target.dataset.lang;
+                languageSelector.textContent = selectedLanguage;
+                // Закрыть список
+                languageList.style.maxHeight = "0px";
+            }
+        });
     });
 
     // Закрытие при клике вне выпадающего меню
     document.addEventListener("click", (event) => {
-        if (!event.target.closest("._language")) {
-            languageList.style.maxHeight = "0px";
-        }
+        languageLists.forEach(languageList => {
+            if (!event.target.closest("._language") && languageList.style.maxHeight !== "0px") {
+                languageList.style.maxHeight = "0px";
+            }
+        });
     });
 });
 // Получаем элементы
