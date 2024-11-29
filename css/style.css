@@ -263,6 +263,30 @@ section {
   padding: 90px 0;
 }
 
+.arrow {
+  position: fixed;
+  top: 80%;
+  right: 50px;
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  background: rgba(250, 250, 250, 0.2);
+}
+.arrow a {
+  width: 40px;
+  height: 40px;
+  padding: 13px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid var(--siniy);
+}
+
 .header__container {
   display: -webkit-box;
   display: -ms-flexbox;

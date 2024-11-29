@@ -111,8 +111,8 @@ document.addEventListener("DOMContentLoaded", () => {
     updateBackground(slides[0]);
 });
 const menuIcon = document.querySelector('.menu__icon'),
-body = document.querySelector('body'),
-headerContainerBottom = document.querySelector('.header__container.bottom');
+    body = document.querySelector('body'),
+    headerContainerBottom = document.querySelector('.header__container.bottom');
 menuIcon.addEventListener('click', () => {
     menuIcon.classList.toggle('open');
     body.classList.toggle('lock');
@@ -153,45 +153,76 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 function maskPhone(selector, masked = '+7 (___) ___-__-__') {
     const elems = document.querySelectorAll(selector);
-  
+
     function mask(event) {
-      const keyCode = event.keyCode;
-      const template = masked,
-        def = template.replace(/\D/g, ""),
-        val = this.value.replace(/\D/g, "");
-      console.log(template);
-      let i = 0,
-        newValue = template.replace(/[_\d]/g, function (a) {
-          return i < val.length ? val.charAt(i++) || def.charAt(i) : a;
-        });
-      i = newValue.indexOf("_");
-      if (i !== -1) {
-        newValue = newValue.slice(0, i);
-      }
-      let reg = template.substr(0, this.value.length).replace(/_+/g,
-        function (a) {
-          return "\\d{1," + a.length + "}";
-        }).replace(/[+()]/g, "\\$&");
-      reg = new RegExp("^" + reg + "$");
-      if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) {
-        this.value = newValue;
-      }
-      if (event.type === "blur" && this.value.length < 5) {
-        this.value = "";
-      }
-  
+        const keyCode = event.keyCode;
+        const template = masked,
+            def = template.replace(/\D/g, ""),
+            val = this.value.replace(/\D/g, "");
+        console.log(template);
+        let i = 0,
+            newValue = template.replace(/[_\d]/g, function (a) {
+                return i < val.length ? val.charAt(i++) || def.charAt(i) : a;
+            });
+        i = newValue.indexOf("_");
+        if (i !== -1) {
+            newValue = newValue.slice(0, i);
+        }
+        let reg = template.substr(0, this.value.length).replace(/_+/g,
+            function (a) {
+                return "\\d{1," + a.length + "}";
+            }).replace(/[+()]/g, "\\$&");
+        reg = new RegExp("^" + reg + "$");
+        if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) {
+            this.value = newValue;
+        }
+        if (event.type === "blur" && this.value.length < 5) {
+            this.value = "";
+        }
+
     }
-  
+
     for (const elem of elems) {
-      elem.addEventListener("input", mask);
-      elem.addEventListener("focus", mask);
-      elem.addEventListener("blur", mask);
+        elem.addEventListener("input", mask);
+        elem.addEventListener("focus", mask);
+        elem.addEventListener("blur", mask);
     }
-  
-  }
-  
-  // use
-  
-  // maskPhone('селектор элементов', 'маска, если маску не передать то будет работать стандартная +7 (___) ___-__-__');
-  
-  maskPhone('.phone');
+
+}
+
+// use
+
+// maskPhone('селектор элементов', 'маска, если маску не передать то будет работать стандартная +7 (___) ___-__-__');
+
+maskPhone('.phone');
+
+// Выбираем все ссылки, содержащие в href якорь (например, #header)
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault(); // Отменяем стандартное действие ссылки
+
+        const targetId = this.getAttribute('href').substring(1); // Получаем ID из href
+        const targetElement = document.getElementById(targetId); // Находим элемент по ID
+
+        if (targetElement) {
+            // Прокручиваем страницу до элемента
+            targetElement.scrollIntoView({
+                behavior: 'smooth', // Плавный скролл
+                block: 'start'     // Прокручиваем до начала элемента
+            });
+        }
+    });
+});
+
+// Показываем/скрываем стрелочку в зависимости от позиции на странице
+const arrow = document.querySelector('.arrow');
+
+if (arrow) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) { // Если прокрутка больше 100px
+            arrow.style.display = 'block'; // Показываем стрелочку
+        } else {
+            arrow.style.display = 'none'; // Скрываем стрелочку
+        }
+    });
+}
