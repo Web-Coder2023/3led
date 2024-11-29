@@ -73,7 +73,6 @@
         }
 
         &-item {
-            transform: translateX(-60px);
             margin-top: 40px;
             padding: 50px 40px;
             background: var(--fon);
@@ -101,6 +100,35 @@
                     line-height: 130%;
                     color: #a5a5a5;
                 }
+            }
+        }
+
+        &-wrap {
+            display: flex;
+gap: 30px;
+            ul {
+                box-shadow: 0 0 10px 0 rgba(125, 125, 125, 0.15);
+                flex: auto;
+
+                li {
+                    height: 100%;
+                    display: flex;
+                    gap: 30px;
+                    flex-direction: column;
+
+                    ._label {
+                        align-items: flex-start;
+                        text-align: left;
+                        gap: 15px;
+                        span {
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+
+            form {
+                max-width: 58%;
             }
         }
     }
