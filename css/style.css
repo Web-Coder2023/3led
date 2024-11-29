@@ -856,6 +856,10 @@ section {
   color: var(--siniy);
 }
 
+.catalog {
+  padding-bottom: 0;
+}
+
 .about {
   background: var(--fon);
 }
