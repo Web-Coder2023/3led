@@ -118,3 +118,36 @@ menuIcon.addEventListener('click', () => {
     body.classList.toggle('lock');
     headerContainerBottom.classList.toggle('open');
 })
+// Ждем загрузки DOM-дерева
+document.addEventListener('DOMContentLoaded', () => {
+    // Выбираем все элементы вкладок и их контент
+    const tabs = document.querySelectorAll('.tabs__item');
+    const tabsContent = document.querySelectorAll('.tabs__content-item');
+
+    // Скрываем все вкладки, кроме активной
+    function hideAllTabs() {
+        tabsContent.forEach(content => {
+            content.style.display = 'none';
+        });
+        tabs.forEach(tab => {
+            tab.classList.remove('active');
+        });
+    }
+
+    // Показываем указанную вкладку
+    function showTab(index) {
+        tabsContent[index].style.display = 'block';
+        tabs[index].classList.add('active');
+    }
+
+    // Инициализация: скрываем все табы и показываем первый
+    hideAllTabs();
+
+    // Добавляем обработчики кликов по вкладкам
+    tabs.forEach((tab, index) => {
+        tab.addEventListener('click', () => {
+            hideAllTabs();
+            showTab(index);
+        });
+    });
+});

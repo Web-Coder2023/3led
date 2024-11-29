@@ -1,0 +1,47 @@
+.tabs {
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+
+        li {
+            background: var(--fon);
+            padding: 15px 10px 25px 10px;
+            border-radius: 5px;
+            width: 33.3%;
+            flex: auto;
+            cursor: pointer;
+
+            font-family: var(--font-family);
+
+            h4 {
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 110%;
+                color: #000;
+                margin-bottom: 10px;
+            }
+
+            h5 {
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 120%;
+                color: var(--teks);
+            }
+
+            img {
+                display: block;
+                width: 50px;
+                height: 50px;
+                margin-left: auto;
+            }
+        }
+    }
+    &__item.active {
+        padding-bottom: 0;
+    }
+    &__item.active .tabs__item-box {
+        background-color: #fff;
+        padding: 10px;
+    }
+}

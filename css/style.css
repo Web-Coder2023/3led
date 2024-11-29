@@ -992,8 +992,122 @@ section {
   height: 275px;
 }
 
+.tabs__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 20px;
+}
+.tabs__list li {
+  background: var(--fon);
+  padding: 15px 10px 25px 10px;
+  border-radius: 5px;
+  width: 33.3%;
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  cursor: pointer;
+  font-family: var(--font-family);
+}
+.tabs__list li h4 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 110%;
+  color: #000;
+  margin-bottom: 10px;
+}
+.tabs__list li h5 {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  color: var(--teks);
+}
+.tabs__list li img {
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin-left: auto;
+}
+.tabs__item.active {
+  padding-bottom: 0;
+}
+.tabs__item.active .tabs__item-box {
+  background-color: #fff;
+  padding: 10px;
+}
+
 .footer {
-  padding: 20px;
+  padding: 40px 0;
+  background: var(--fon);
+}
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.footer__column {
+  color: var(--teks);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 40px;
+}
+.footer__column-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.footer__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 40px;
+}
+.footer__menu a {
+  font-weight: 500;
+  font-size: 18px;
+}
+.footer .policy {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 18px;
+  text-decoration: underline;
+  color: #898989;
+  display: block;
+  margin-bottom: 20px;
+}
+.footer .copy {
+  font-family: var(--third-family);
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 125%;
+  color: #898989;
+}
+.footer__logo img {
+  width: 46px;
 }
 
 .case {
