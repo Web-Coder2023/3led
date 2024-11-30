@@ -3,12 +3,18 @@
     &__list {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
+        @media (max-width: 800px) {
+            grid-template-columns: repeat(1, 1fr);
+        }
         gap: 20px;
         margin-top: 35px;
         padding-bottom: 40px;
         border-bottom: 1px solid var(--cherta);
         .card__image {
             height: 275px;
+            @media (max-width: 800px) {
+                height: 300px;
+            }
         }
     }
 }
