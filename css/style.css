@@ -1474,6 +1474,119 @@ section {
           flex-direction: row-reverse;
 }
 
+.contacts {
+  background: var(--fon);
+}
+.contacts__list {
+  margin-top: 50px;
+  margin-bottom: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 37px;
+}
+.contacts__list li {
+  -webkit-box-flex: 1;
+      -ms-flex: auto;
+          flex: auto;
+  font-family: var(--font-family);
+  font-size: 20px;
+}
+.contacts__list li h3 {
+  font-weight: 600;
+  color: var(--siniy);
+}
+.contacts__list li a {
+  font-weight: 400;
+  line-height: 200%;
+  text-decoration: underline;
+  color: var(--teks);
+}
+.contacts__map {
+  background: #fff;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+.contacts__box {
+  position: relative;
+}
+.contacts__box iframe {
+  width: 100%;
+  min-height: 415px;
+}
+.contacts__address {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  padding: 10px;
+  -webkit-box-shadow: 0 0 10px 0 rgba(125, 125, 125, 0.15);
+          box-shadow: 0 0 10px 0 rgba(125, 125, 125, 0.15);
+  background: #fff;
+  border-radius: 10px;
+}
+.contacts__address p {
+  font-weight: 500;
+  font-size: 20px;
+}
+.contacts__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-family: var(--font-family);
+  font-weight: 400;
+  line-height: 125%;
+}
+.contacts__label p {
+  font-size: 16px;
+  color: var(--teks);
+  max-width: 322px;
+}
+.contacts__label .time {
+  font-size: 20px;
+  text-align: right;
+}
+.contacts-form {
+  padding-bottom: 0;
+}
+.contacts-form__container {
+  font-family: var(--font-family);
+  padding: 50px 40px;
+  background: var(--fon);
+}
+.contacts-form ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 25px;
+}
+.contacts-form li {
+  -webkit-box-shadow: 0 0 10px 0 rgba(125, 125, 125, 0.15);
+          box-shadow: 0 0 10px 0 rgba(125, 125, 125, 0.15);
+  background: #fff;
+  padding: 40px;
+}
+.contacts-form li h3 {
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--siniy);
+}
+.contacts-form li p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+  color: #a5a5a5;
+}
+
 .widget-contact ul {
   margin-top: 40px;
   display: grid;
