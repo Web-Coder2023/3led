@@ -1,0 +1,210 @@
+.services {
+    background: var(--fon);
+    padding: 5vw 0;
+
+    &-head {
+        padding-bottom: 5vw;
+    }
+
+    .about {
+        background-color: #fff;
+        padding: 50px 0;
+    }
+
+    &__container {
+        display: flex;
+        padding: 20px 0;
+        gap: 20px;
+        @media (max-width: 900px) {
+            flex-direction: column;
+        }
+        @media (max-width: 900px) {
+            flex-direction: column;
+        }
+    }
+
+    &__list {
+        max-width: 700px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        @media (max-width: 900px) {
+            max-width: 100%;
+        }
+    }
+
+    &__item {
+        padding: 30px 10px;
+        box-shadow: 0 0 10px 0 rgba(125, 125, 125, 0.15);
+        background: #fff;
+
+        ul {
+            margin-top: 20px;
+            margin-left: 35px;
+
+            li {
+                list-style: disc;
+                font-family: var(--font-family);
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 125%;
+                color: var(--zagolovok);
+            }
+        }
+
+        p {
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 125%;
+            color: var(--zagolovok);
+        }
+    }
+
+    &__title {
+        font-family: var(--font-family);
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 110%;
+        color: var(--zagolovok);
+        padding-left: 10px;
+        border-left: 4px solid var(--siniy);
+    }
+
+    &__box {
+        display: flex;
+        gap: 20px;
+        @media (max-width: 768px) {
+            flex-direction: column;
+        }
+    }
+
+    aside {
+        display: flex;
+        max-width: 320px;
+        flex-direction: column;
+        flex: 1 1 auto;
+        max-height: 613px;
+        @media (max-width: 900px) {
+            max-width: 100%;
+        }
+
+        h3 {
+            padding-right: 30px;
+            color: #000;
+            margin-bottom: 30px;
+            padding-left: 30px;
+        }
+
+        ul {
+            padding-right: 30px;
+            margin-left: 50px;
+            margin-bottom: 50px;
+        }
+
+        ._btn-siniy {
+            margin-top: auto;
+            padding: 14px;
+
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 120%;
+            text-align: center;
+            color: #fff;
+        }
+    }
+
+    &__text {
+        padding-left: 30px;
+    }
+
+    &__text.mb {
+        margin-bottom: 35px;
+    }
+
+    &__advantages {
+        padding-top: 90px;
+
+        &-title {
+            margin-bottom: 20px;
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 40px;
+            line-height: 110%;
+            color: var(--zagolovok);
+            @media (max-width: 768px) {
+                font-size: 25px;
+            }
+        }
+
+        &-text {
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 110%;
+            color: var(--teks);
+            margin-bottom: 40px;
+        }
+
+        &-box {
+            padding: 42px 40px;
+
+            p {
+                margin-bottom: 0;
+            }
+
+            background-color: #fff;
+            font-size: 25px;
+
+            a {
+                color: var(--siniy);
+            }
+
+            margin-bottom: 90px;
+        }
+
+        &-list {
+            margin-bottom: 45px;
+            li {
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 160%;
+                color: var(--siniy);
+                list-style: disc;
+                
+                span {
+                    display: block;
+                    color: var(--teks);
+                }
+            }
+        }
+
+        &-spektr {
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 160%;
+            color: var(--teks);
+            margin-bottom: 90px;
+
+            ul {
+                margin-top: 45px;
+                padding-left: 20px;
+
+                li {
+                    list-style-type: disc;
+                }
+            }
+        }
+
+        .services__item {
+            margin-bottom: 20px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
