@@ -226,3 +226,44 @@ if (arrow) {
         }
     });
 }
+document.addEventListener("DOMContentLoaded", () => {
+    const mainImage = document.querySelector(".catalog-product__slider-item img");
+    const thumbnails = document.querySelectorAll(".catalog-product__thumbnail img");
+  
+    thumbnails.forEach((thumbnail) => {
+        thumbnail.addEventListener("click", () => {
+            const currentMainSrc = mainImage.src;
+            mainImage.src = thumbnail.src;
+            thumbnail.src = currentMainSrc;
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const colorItems = document.querySelectorAll(".catalog-product__color-item");
+  
+    // Применяем цвет фона из атрибута data-color
+    colorItems.forEach((item) => {
+      const color = item.getAttribute("data-color");
+      item.style.backgroundColor = color; // Устанавливаем цвет из data-color
+  
+      item.addEventListener("click", () => {
+        // Убираем выделение со всех элементов
+        colorItems.forEach((el) => el.classList.remove("catalog-product__color-item--selected"));
+        
+        // Добавляем класс выделения к выбранному элементу
+        item.classList.add("catalog-product__color-item--selected");
+  
+        // Выводим выбранный цвет в консоль (или выполняем другое действие)
+        console.log(`Выбранный цвет: ${color}`);
+      });
+    });
+  });
+  
+  const colorSlider = new Swiper(".color__slider", {
+    loop: true,
+    speed: 600,
+    slidesPerView: 5, // Исправлено название параметра
+    spaceBetween: 15, // Расстояние между слайдами (можно изменить)
+  });
+  

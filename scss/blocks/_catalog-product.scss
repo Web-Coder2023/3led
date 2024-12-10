@@ -1,0 +1,103 @@
+.catalog-product {
+    background: var(--fon);
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+    }
+}
+
+.catalog-product__slider {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+}
+
+.catalog-product__slider-item {
+    box-shadow: 0 0 10px 0 rgba(125, 125, 125, 0.2);
+    background: #fff;
+    border-radius: 4px;
+    padding: 55px;
+
+    img {
+        width: 286px;
+        height: 286px;
+        object-fit: cover;
+    }
+}
+
+.catalog-product__thumbnails {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.catalog-product__thumbnail {
+    cursor: pointer;
+    padding: 5px 30px;
+    background-color: #fff;
+    overflow: hidden;
+
+    img {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+}
+
+.catalog-product__box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.catalog-product__title {
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--siniy);
+    margin-bottom: 20px;
+}
+
+.color__slider {
+    max-width: 320px;
+    overflow: hidden;
+}
+
+.catalog-product__color-item {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: transform 0.2s ease, border 0.2s ease;
+}
+
+.catalog-product__color-item:hover {
+    transform: scale(1.1);
+}
+
+.catalog-product__color-item--selected::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 18px;
+    height: 14px;
+    background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 14"><path d="M18 1.47204L5.65714 14L0 8.25802L1.45029 6.78598L5.65714 11.0455L16.5497 0L18 1.47204Z" fill="white"/></svg>') no-repeat center;
+    background-size: contain;
+}
+
+
+.catalog-product__description {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    color: #a5a5a5;
+    margin-top: 15px;
+}
