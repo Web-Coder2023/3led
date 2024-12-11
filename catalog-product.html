@@ -407,7 +407,8 @@
                                 <h3 class="catalog-product__title">1. Выберите цвет корпуса</h3>
                                 <div class="color__slider">
                                     <div class="color__wrapper swiper-wrapper">
-                                        <div class="catalog-product__color-item swiper-slide" data-color="#f60100"></div>
+                                        <div class="catalog-product__color-item swiper-slide" data-color="#f60100">
+                                        </div>
                                         <div class="catalog-product__color-item swiper-slide" data-color="green"></div>
                                         <div class="catalog-product__color-item swiper-slide" data-color="blue"></div>
                                         <div class="catalog-product__color-item swiper-slide" data-color="white"></div>
@@ -416,16 +417,206 @@
                                 </div>
                                 <p class="catalog-product__description">Цвет краски выбирается по таблице RAL</p>
                             </div>
-
-                            <div class="catalog-product__box"></div>
-                            <div class="catalog-product__box"></div>
-                            <div class="catalog-product__box"></div>
-                            <div class="catalog-product__box"></div>
-                            <div class="catalog-product__box"></div>
+                            <div class="catalog-product__box">
+                                <h3 class="catalog-product__title">1.1 Мой цвет RAL</h3>
+                                <input type="text" id="color" name="color" placeholder="Введите номер цвета">
+                                <p class="catalog-product__description">
+                                    По желанию заказчика можем покрасить по RAL, за дополнительную плату
+                                </p>
+                            </div>
+                            <div class="catalog-product__box">
+                                <h3 class="catalog-product__title">2. Цветовая температура</h3>
+                                <div class="color__slider">
+                                    <div class="color__wrapper swiper-wrapper">
+                                        <div class="catalog-product__color-item swiper-slide" data-color="#fdbb14">
+                                        </div>
+                                        <div class="catalog-product__color-item swiper-slide" data-color="#fff"></div>
+                                        <div class="catalog-product__color-item swiper-slide" data-color="#88c9f8">
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="catalog-product__description">
+                                    По желанию заказчика можем покрасить по RAL, за дополнительную плату
+                                </p>
+                            </div>
+                            <div class="catalog-product__box">
+                                <h3 class="catalog-product__title">3. Выберите цвет свечения</h3>
+                                <ul class="catalog-product__checkbox-list">
+                                    <li class="catalog-product__checkbox-item">
+                                        <input type="radio" id="checkbox-1" name="color-group" class="catalog-product__checkbox-input" />
+                                        <label for="checkbox-1" class="catalog-product__checkbox-label">
+                                            <span class="catalog-product__checkbox-icon"></span>
+                                        </label>
+                                        <label class="catalog-product__checkbox-text" for="checkbox-1">Теплый</label>
+                                    </li>
+                                    <li class="catalog-product__checkbox-item">
+                                        <input type="radio" id="checkbox-2" name="color-group" class="catalog-product__checkbox-input" />
+                                        <label for="checkbox-2" class="catalog-product__checkbox-label">
+                                            <span class="catalog-product__checkbox-icon"></span>
+                                        </label>
+                                        <label class="catalog-product__checkbox-text" for="checkbox-2">Дневной</label>
+                                    </li>
+                                    <li class="catalog-product__checkbox-item">
+                                        <input type="radio" id="checkbox-3" name="color-group" class="catalog-product__checkbox-input" />
+                                        <label for="checkbox-3" class="catalog-product__checkbox-label">
+                                            <span class="catalog-product__checkbox-icon"></span>
+                                        </label>
+                                        <label class="catalog-product__checkbox-text" for="checkbox-3">Холодный</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="catalog-product__box">
+                                <h3 class="catalog-product__title">4. Выберите угол сечения</h3>
+                                <ul class="catalog-product__checkbox-list">
+                                    <li class="catalog-product__checkbox-item">
+                                        <input type="radio" id="checkbox-4" name="angle-group" class="catalog-product__checkbox-input" />
+                                        <label for="checkbox-4" class="catalog-product__checkbox-label">
+                                            <span class="catalog-product__checkbox-icon"></span>
+                                        </label>
+                                        <label class="catalog-product__checkbox-text" for="checkbox-4">60</label>
+                                    </li>
+                                    <li class="catalog-product__checkbox-item">
+                                        <input type="radio" id="checkbox-5" name="angle-group" class="catalog-product__checkbox-input" />
+                                        <label for="checkbox-5" class="catalog-product__checkbox-label">
+                                            <span class="catalog-product__checkbox-icon"></span>
+                                        </label>
+                                        <label class="catalog-product__checkbox-text" for="checkbox-5">70</label>
+                                    </li>
+                                    <li class="catalog-product__checkbox-item">
+                                        <input type="radio" id="checkbox-6" name="angle-group" class="catalog-product__checkbox-input" />
+                                        <label for="checkbox-6" class="catalog-product__checkbox-label">
+                                            <span class="catalog-product__checkbox-icon"></span>
+                                        </label>
+                                        <label class="catalog-product__checkbox-text" for="checkbox-6">80</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="catalog-product__box">
+                                <h3 class="catalog-product__title">5. Выберите мощность</h3>
+                                <ul class="catalog-product__checkbox-list fd">
+                                    <li class="catalog-product__checkbox-item">
+                                        <input type="radio" id="checkbox-7" name="power-group" class="catalog-product__checkbox-input" />
+                                        <label for="checkbox-7" class="catalog-product__checkbox-label">
+                                            <span class="catalog-product__checkbox-icon"></span>
+                                        </label>
+                                        <label class="catalog-product__checkbox-text" for="checkbox-7">COB 12 Ватт</label>
+                                    </li>
+                                    <li class="catalog-product__checkbox-item">
+                                        <input type="radio" id="checkbox-8" name="power-group" class="catalog-product__checkbox-input" />
+                                        <label for="checkbox-8" class="catalog-product__checkbox-label">
+                                            <span class="catalog-product__checkbox-icon"></span>
+                                        </label>
+                                        <label class="catalog-product__checkbox-text" for="checkbox-8">COB 20 Ватт (+300.00 руб)</label>
+                                    </li>
+                                </ul>
+                            </div>
+                            
                         </div>
+                    </div>
+                    <div class="catalog-product__form">
+                        <h3>
+                            Для оформления заказа укажите данные для обратой связи
+                        </h3>
+                        <form class="form" action="#" method="post">
+                            <div class="form__group">
+                                <input class="form__input" type="text" id="name" name="name" placeholder="Ваше имя"
+                                    required>
+                            </div>
+
+                            <div class="form__group">
+                                <div class="phone-input">
+                                    <span class="phone-input__flag">
+                                        <svg width="30" height="20" viewBox="0 0 30 20" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M30 16.9229C30 17.7389 29.6488 18.5215 29.0237 19.0986C28.3986 19.6756 27.5507 19.9998 26.6667 19.9998H3.33333C2.44928 19.9998 1.60143 19.6756 0.976311 19.0986C0.35119 18.5215 0 17.7389 0 16.9229V13.8459H30V16.9229Z"
+                                                fill="#FD0303" />
+                                            <path d="M0 6.15405H30V13.8464H0V6.15405Z" fill="#1010F6" />
+                                            <path
+                                                d="M26.6667 0H3.33333C2.44928 0 1.60143 0.324175 0.976311 0.90121C0.35119 1.47824 0 2.26087 0 3.07692L0 6.15385H30V3.07692C30 2.26087 29.6488 1.47824 29.0237 0.90121C28.3986 0.324175 27.5507 0 26.6667 0Z"
+                                                fill="#EEEEEE" />
+                                        </svg>
+                                    </span>
+                                    <input class="phone phone-input__number" type="tel" id="phone" name="phone"
+                                        placeholder="+7 (999) 999-99-99" required>
+                                </div>
+                            </div>
+
+                            <div class="form__group">
+                                <input class="form__input" type="email" id="email" name="email" placeholder="Ваш e-mail"
+                                    required>
+                            </div>
+
+                            <button class="_btn _btn-siniy" type="submit">Отправить</button>
+
+                            <p class="form__note">
+                                Нажимая на кнопку, вы даёте согласие на обработку персональных данных и
+                                соглашаетесь
+                                с политикой конфиденциальности
+                            </p>
+                        </form>
                     </div>
                 </div>
             </section>
+            <section class="product-description">
+                <div class="product-description__container">
+                    <h2 class="_title">Описание <span>|</span></h2>
+                    <p>
+                        Уличный светильник имеет цилиндрический корпус. Свет распространяется в две стороны "Вверх и
+                        вниз"
+                        UP and DOWN. Угол свечения 600. Имеет цветовую температуру 4000-4500К (Дневной белый сет). По
+                        желанию
+                        заказчика можем изготовить необходимый цвет свечения. Герметичность корпуса по классу защиты
+                        ip65
+                        (влагозащищённый). Встроенный блок питания (класс защиты ip65) установлен в "ножке" светильника,
+                        для
+                        защиты от перегрева. Уличный светильник имеет цилиндрический корпус. Свет распространяется в две
+                        стороны
+                        "Вверх и вниз" UP and DOWN. Угол свечения 600. Имеет цветовую температуру 4000-4500К (Дневной
+                        белый сет).
+                        По желанию заказчика можем изготовить необходимый цвет свечения. Герметичность корпуса по классу
+                        защиты
+                        ip65 (влагозащищённый). Встроенный блок питания (класс защиты ip65) установлен в "ножке"
+                        светильника, для
+                        защиты от перегрева.
+                    </p>
+                    <button class="_label-view">
+                        Показать
+                    </button>
+                </div>
+            </section>
+            <section class="product-characteristics">
+                <div class="product-characteristics__container">
+                    <h2 class="_title">Технические характеристики <span>|</span></h2>
+                    <ul>
+                        <li>
+                            Общая мощность, Ватт
+                            <div class="product-characteristics__item">12 Ватт (2*6 Ватт)</div>
+                        </li>
+                        <li>
+                            Общая мощность, Ватт
+                            <div class="product-characteristics__item">12 Ватт (2*6 Ватт)</div>
+                        </li>
+                        <li>
+                            Общая мощность, Ватт
+                            <div class="product-characteristics__item">12 Ватт (2*6 Ватт)</div>
+                        </li>
+                        <li>
+                            Общая мощность, Ватт
+                            <div class="product-characteristics__item">12 Ватт (2*6 Ватт)</div>
+                        </li>
+                        <li>
+                            Общая мощность, Ватт
+                            <div class="product-characteristics__item">12 Ватт (2*6 Ватт)</div>
+                        </li>
+                        <li>
+                            Общая мощность, Ватт
+                            <div class="product-characteristics__item">12 Ватт (2*6 Ватт)</div>
+                        </li>
+                    </ul>
+                    <button class="_label-view">Показать</button>
+                </div>
+            </section>            
             <section class="tabs">
                 <div class="tabs__container">
                     <ul class="tabs__list">

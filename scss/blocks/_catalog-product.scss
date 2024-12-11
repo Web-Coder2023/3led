@@ -1,13 +1,18 @@
 .catalog-product {
     background: var(--fon);
+
     &__wrapper {
         display: flex;
         justify-content: space-between;
+        margin-top: 30px;
+        align-items: flex-start;
+
         gap: 30px;
     }
 }
 
 .catalog-product__slider {
+    margin-top: 70px;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -52,6 +57,26 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+    &:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    input {
+        box-shadow: 0 0 10px 0 rgba(125, 125, 125, 0.15);
+        background: #fff;
+        padding: 11px 20px;
+
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 200%;
+        color: var(--teks);
+    }
+}
+
+.fd {
+    flex-direction: column;
 }
 
 .catalog-product__title {
@@ -100,4 +125,120 @@
     line-height: 130%;
     color: #a5a5a5;
     margin-top: 15px;
+}
+
+.catalog-product__checkbox-box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.catalog-product__title {
+    color: #1010F6;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.catalog-product__checkbox-list {
+    display: flex;
+    gap: 20px;
+}
+
+.catalog-product__checkbox-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: #000;
+}
+
+.catalog-product__checkbox-input {
+    display: none;
+    /* Скрываем стандартный радиокнопку */
+}
+
+.catalog-product__checkbox-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 0 10px 0 rgba(125, 125, 125, 0.15);
+    background: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.catalog-product__checkbox-icon {
+    display: none;
+    width: 14px;
+    height: 11px;
+    background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 11"><path d="M14 1.1566L4.4 11L0 6.48844L1.128 5.33184L4.4 8.6786L12.872 0L14 1.1566Z" fill="%231010F6"/></svg>') no-repeat center;
+    background-size: contain;
+}
+
+.catalog-product__checkbox-input:checked+.catalog-product__checkbox-label .catalog-product__checkbox-icon {
+    display: block;
+}
+
+.catalog-product {
+    &__form {
+        margin-top: 50px;
+
+        h3 {
+            font-family: var(--font-family);
+            font-weight: 500;
+            font-size: 35px;
+            line-height: 110%;
+            color: var(--siniy);
+        }
+
+        form {
+            margin: 0 auto;
+            margin-top: 50px;
+        }
+    }
+}
+
+.product-description p {
+    margin-top: 20px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 140%;
+    color: var(--teks);
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--cherta);
+}
+
+.product-characteristics {
+    background: var(--fon);
+}
+
+.product-characteristics ul {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+.product-characteristics ul li {
+    display: list-item; /* По умолчанию показываем все элементы */
+
+    font-family: var(--font-family);
+font-weight: 500;
+font-size: 20px;
+line-height: 120%;
+color: var(--teks);
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.product-characteristics ul li.hidden {
+    display: none; /* Скрываем элементы с классом .hidden */
 }

@@ -266,4 +266,72 @@ document.addEventListener("DOMContentLoaded", () => {
     slidesPerView: 5, // Исправлено название параметра
     spaceBetween: 15, // Расстояние между слайдами (можно изменить)
   });
-  
+  document.addEventListener("DOMContentLoaded", () => {
+    const button = document.querySelector(".product-description ._label-view");
+    const textElement = document.querySelector(".product-description p");
+
+    const fullText = textElement.textContent.trim(); // Получаем полный текст
+    const words = fullText.split(" ");
+    const maxWords = 58*4; // Изменяем лимит слов на 58
+    const previewText = words.slice(0, maxWords).join(" ");
+
+    if (words.length > maxWords) {
+        // Если слов больше максимума, обрезаем текст
+        textElement.textContent = previewText + "...";
+        textElement.dataset.fullText = fullText;
+
+        // Добавляем обработчик клика для кнопки
+        button.addEventListener("click", () => {
+            if (textElement.classList.contains("expanded")) {
+                // Если текст развернут, скрываем лишнее
+                textElement.textContent = previewText + "...";
+                textElement.classList.remove("expanded");
+                button.textContent = "Показать";
+            } else {
+                // Если текст скрыт, разворачиваем
+                textElement.textContent = textElement.dataset.fullText;
+                textElement.classList.add("expanded");
+                button.textContent = "Скрыть";
+            }
+        });
+    } else {
+        // Если слов меньше максимума, скрываем кнопку
+        button.style.display = "none";
+    }
+});
+document.addEventListener("DOMContentLoaded", () => {
+    const button = document.querySelector(".product-characteristics ._label-view"); // Кнопка "Показать"
+    const listItems = document.querySelectorAll(".product-characteristics ul li"); // Элементы списка
+    const maxVisible = 4; // Количество видимых элементов
+
+    // Скрываем все элементы после первых четырех
+    if (listItems.length > maxVisible) {
+        listItems.forEach((item, index) => {
+            if (index >= maxVisible) {
+                item.style.display = "none"; // Скрываем элементы с помощью display: none
+            }
+        });
+
+        // Добавляем обработчик на кнопку
+        button.addEventListener("click", () => {
+            const hiddenItems = document.querySelectorAll(".product-characteristics ul li[style='display: none;']");
+
+            if (hiddenItems.length > 0) {
+                // Показываем скрытые элементы
+                hiddenItems.forEach((item) => item.style.display = "flex");
+                button.textContent = "Скрыть";
+            } else {
+                // Скрываем элементы обратно
+                listItems.forEach((item, index) => {
+                    if (index >= maxVisible) {
+                        item.style.display = "none";
+                    }
+                });
+                button.textContent = "Показать";
+            }
+        });
+    } else {
+        // Если элементов меньше 4, скрываем кнопку
+        button.style.display = "none";
+    }
+});
