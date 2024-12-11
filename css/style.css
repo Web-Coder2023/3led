@@ -1255,12 +1255,16 @@ section {
   font-weight: 600;
   font-size: 20px;
   color: var(--siniy);
+  margin-bottom: 20px;
 }
 .tabs__content-item li p {
   font-weight: 400;
   font-size: 18px;
   line-height: 130%;
   color: #a5a5a5;
+}
+.tabs__content-item li p:not(:last-child) {
+  margin-bottom: 20px;
 }
 .tabs__content-wrap {
   display: -webkit-box;
