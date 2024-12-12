@@ -274,6 +274,10 @@ const thumbnailsSlider = new Swiper('.catalog-product__thumbnails', {
     mousewheel: true, // Управление с помощью колесика мыши
     breakpoints: {
         0: {
+            direction: 'horizontal', // Вертикальная прокрутка
+            slidesPerView: 1, // Для экранов меньше 768px
+        },
+        470: {
             slidesPerView: 2, // Для экранов меньше 768px
         },
         768: {
@@ -359,3 +363,9 @@ document.addEventListener("DOMContentLoaded", () => {
         button.style.display = "none";
     }
 });
+
+const headerSearchBtnWrap = document.querySelector('.header__wrap .header__search-btn');
+const headerSearchBtnInput = document.querySelector('.header__wrap .header__search-btn-input');
+headerSearchBtnWrap.addEventListener('click', () => {
+    headerSearchBtnInput.classList.toggle('_active')
+})

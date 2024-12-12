@@ -23,6 +23,23 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
+        @media (max-width: 470px) {
+            flex-direction: row;
+            max-width: 90%;
+        }
+    }
+}
+
+.catalog {
+    @media (max-width: 470px) {
+        &-prev {
+            transform: rotate(-90deg);
+            margin-right: 5px;
+        }
+        &-next {
+            transform: rotate(-90deg);
+            margin-left: 5px;
+        }
     }
 }
 
@@ -36,6 +53,10 @@
     @media (max-width: 1024px) {
         margin-top: 0;
         width: 100%;
+    }
+
+    @media (max-width: 470px) {
+        flex-direction: column;
     }
 }
 
@@ -80,6 +101,7 @@
     @media (max-width: 768px) {
         max-height: 211px;
     }
+
 }
 
 .catalog-product__thumbnail {
@@ -141,15 +163,26 @@
 .color__slider {
     max-width: 320px;
     overflow: hidden;
+
+    @media (max-width: 470px) {
+        max-width: calc(55px*5);
+    }
 }
 
 .catalog-product__color-item {
     position: relative;
     width: 50px;
     height: 50px;
+
+    @media (max-width: 470px) {
+        width: 40px;
+        height: 40px;
+    }
+
     cursor: pointer;
     border-radius: 4px;
-    transition: transform 0.2s ease, border 0.2s ease;
+    transition: transform 0.2s ease,
+    border 0.2s ease;
 }
 
 .catalog-product__color-item:hover {
@@ -193,6 +226,10 @@
 .catalog-product__checkbox-list {
     display: flex;
     gap: 20px;
+
+    @media (max-width: 470px) {
+        flex-wrap: wrap;
+    }
 }
 
 .catalog-product__checkbox-item {
@@ -295,4 +332,18 @@
 .product-characteristics ul li.hidden {
     display: none;
     /* Скрываем элементы с классом .hidden */
+}
+
+@media (max-width: 768px) {
+    .product-characteristics ul li {
+        font-size: 12px;
+    }
+
+    .product-description p {
+        font-size: 14px;
+    }
+
+    .catalog-product__form h3 {
+        font-size: 18px;
+    }
 }

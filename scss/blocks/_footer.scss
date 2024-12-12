@@ -55,4 +55,12 @@
             width: 46px;
         }
     }
+
+    @media (max-width: 768px) {
+        &__container {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+    }
 }
