@@ -229,7 +229,7 @@ if (arrow) {
 document.addEventListener("DOMContentLoaded", () => {
     const mainImage = document.querySelector(".catalog-product__slider-item img");
     const thumbnails = document.querySelectorAll(".catalog-product__thumbnail img");
-  
+
     thumbnails.forEach((thumbnail) => {
         thumbnail.addEventListener("click", () => {
             const currentMainSrc = mainImage.src;
@@ -240,39 +240,63 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-    const colorItems = document.querySelectorAll(".catalog-product__color-item");
-  
-    // Применяем цвет фона из атрибута data-color
-    colorItems.forEach((item) => {
-      const color = item.getAttribute("data-color");
-      item.style.backgroundColor = color; // Устанавливаем цвет из data-color
-  
-      item.addEventListener("click", () => {
-        // Убираем выделение со всех элементов
-        colorItems.forEach((el) => el.classList.remove("catalog-product__color-item--selected"));
-        
-        // Добавляем класс выделения к выбранному элементу
-        item.classList.add("catalog-product__color-item--selected");
-  
-        // Выводим выбранный цвет в консоль (или выполняем другое действие)
-        console.log(`Выбранный цвет: ${color}`);
-      });
+    const colorSliders = document.querySelectorAll(".color__slider");
+
+    colorSliders.forEach((slider) => {
+        const colorItems = slider.querySelectorAll(".catalog-product__color-item");
+
+        // Применяем цвет фона из атрибута data-color
+        colorItems.forEach((item) => {
+            const color = item.getAttribute("data-color");
+            item.style.backgroundColor = color; // Устанавливаем цвет из data-color
+
+            item.addEventListener("click", () => {
+                // Убираем выделение со всех элементов текущей группы
+                colorItems.forEach((el) => el.classList.remove("catalog-product__color-item--selected"));
+
+                // Добавляем класс выделения к выбранному элементу
+                item.classList.add("catalog-product__color-item--selected");
+
+                // Выводим выбранный цвет в консоль (или выполняем другое действие)
+                console.log(`Выбранный цвет: ${color}`);
+            });
+        });
     });
-  });
-  
-  const colorSlider = new Swiper(".color__slider", {
+});
+const thumbnailsSlider = new Swiper('.catalog-product__thumbnails', {
+    direction: 'vertical', // Вертикальная прокрутка
+    slidesPerView: 3, // Количество видимых слайдов по умолчанию
+    spaceBetween: 10, // Расстояние между слайдами
+    navigation: {
+        nextEl: '.catalog-next', // Кнопка для прокрутки вниз
+        prevEl: '.catalog-prev', // Кнопка для прокрутки вверх
+    },
+    mousewheel: true, // Управление с помощью колесика мыши
+    breakpoints: {
+        0: {
+            slidesPerView: 2, // Для экранов меньше 768px
+        },
+        768: {
+            slidesPerView: 3, // Для экранов больше или равных 768px
+        },
+    },
+});
+
+
+
+const colorSlider = new Swiper(".color__slider", {
     loop: true,
     speed: 600,
     slidesPerView: 5, // Исправлено название параметра
     spaceBetween: 15, // Расстояние между слайдами (можно изменить)
-  });
-  document.addEventListener("DOMContentLoaded", () => {
+});
+document.addEventListener("DOMContentLoaded", () => {
     const button = document.querySelector(".product-description ._label-view");
     const textElement = document.querySelector(".product-description p");
 
     const fullText = textElement.textContent.trim(); // Получаем полный текст
     const words = fullText.split(" ");
-    const maxWords = 58*4; // Изменяем лимит слов на 58
+    const maxWords = 58 * 4; // Изменяем лимит слов на 58
     const previewText = words.slice(0, maxWords).join(" ");
 
     if (words.length > maxWords) {

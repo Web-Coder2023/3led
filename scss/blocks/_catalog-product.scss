@@ -8,6 +8,21 @@
         align-items: flex-start;
 
         gap: 30px;
+
+        @media (max-width: 1024px) {
+            flex-direction: column;
+            margin-top: 70px;
+        }
+    }
+
+    &__col {
+        max-width: 400px;
+    }
+
+    &__wrap {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
     }
 }
 
@@ -17,6 +32,11 @@
     align-items: center;
     gap: 20px;
     position: relative;
+
+    @media (max-width: 1024px) {
+        margin-top: 0;
+        width: 100%;
+    }
 }
 
 .catalog-product__slider-item {
@@ -29,6 +49,18 @@
         width: 286px;
         height: 286px;
         object-fit: cover;
+
+        @media (max-width: 768px) {
+            width: 125px;
+            height: 125px;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -37,19 +69,38 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 10px;
-    margin-top: 20px;
+    margin: 10px 0;
+    max-height: 350px;
+
+    @media (max-width: 1024px) {
+        margin-top: 0;
+        height: 100%;
+    }
+
+    @media (max-width: 768px) {
+        max-height: 211px;
+    }
 }
 
 .catalog-product__thumbnail {
+    max-height: 110px;
     cursor: pointer;
     padding: 5px 30px;
     background-color: #fff;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     img {
         width: 100px;
         height: 100px;
         object-fit: cover;
+
+        @media (max-width: 768px) {
+            width: 70px;
+            height: 70px;
+        }
     }
 }
 
@@ -226,19 +277,22 @@
     gap: 10px;
     flex-direction: column;
 }
+
 .product-characteristics ul li {
-    display: list-item; /* По умолчанию показываем все элементы */
+    display: list-item;
+    /* По умолчанию показываем все элементы */
 
     font-family: var(--font-family);
-font-weight: 500;
-font-size: 20px;
-line-height: 120%;
-color: var(--teks);
-display: flex;
-justify-content: space-between;
-align-items: center;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    color: var(--teks);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .product-characteristics ul li.hidden {
-    display: none; /* Скрываем элементы с классом .hidden */
+    display: none;
+    /* Скрываем элементы с классом .hidden */
 }

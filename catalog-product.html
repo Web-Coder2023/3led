@@ -337,16 +337,48 @@
                             <div class="catalog-product__slider-item catalog-product__slider-item--active">
                                 <img src="./img/main-image.png" alt="Main product image" />
                             </div>
-                            <div class="catalog-product__thumbnails">
-                                <div class="catalog-product__thumbnail">
-                                    <img src="./img/thumb1.png" alt="Thumbnail 1" />
+                            <div class="catalog-product__wrap">
+                                <button class="catalog-prev">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M13.6 0C15.8402 0 16.9603 0 17.816 0.435974C18.5686 0.819467 19.1805 1.43139 19.564 2.18404C20 3.03969 20 4.15979 20 6.4V13.6C20 15.8402 20 16.9603 19.564 17.816C19.1805 18.5686 18.5686 19.1805 17.816 19.564C16.9603 20 15.8402 20 13.6 20H6.4C4.15979 20 3.03968 20 2.18404 19.564C1.43139 19.1805 0.819468 18.5686 0.435974 17.816C0 16.9603 0 15.8402 0 13.6V6.4C0 4.15979 0 3.03969 0.435974 2.18404C0.819468 1.43139 1.43139 0.819467 2.18404 0.435974C3.03968 0 4.15979 0 6.4 0L13.6 0Z"
+                                        fill="#EEEEEE" />
+                                    <path d="M6.875 11L10 8.5L13.125 11" stroke="#1010F6" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                            <div class="catalog-product__thumbnails swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="catalog-product__thumbnail swiper-slide">
+                                        <img src="./img/thumb1.png" alt="Thumbnail 1" />
+                                    </div>
+                                    <div class="catalog-product__thumbnail swiper-slide">
+                                        <img src="./img/thumb2.png" alt="Thumbnail 2" />
+                                    </div>
+                                    <div class="catalog-product__thumbnail swiper-slide">
+                                        <img src="./img/thumb3.png" alt="Thumbnail 3" />
+                                    </div>
+                                    <div class="catalog-product__thumbnail swiper-slide">
+                                        <img src="./img/thumb1.png" alt="Thumbnail 1" />
+                                    </div>
+                                    <div class="catalog-product__thumbnail swiper-slide">
+                                        <img src="./img/thumb2.png" alt="Thumbnail 2" />
+                                    </div>
+                                    <div class="catalog-product__thumbnail swiper-slide">
+                                        <img src="./img/thumb3.png" alt="Thumbnail 3" />
+                                    </div>
                                 </div>
-                                <div class="catalog-product__thumbnail">
-                                    <img src="./img/thumb2.png" alt="Thumbnail 2" />
-                                </div>
-                                <div class="catalog-product__thumbnail">
-                                    <img src="./img/thumb3.png" alt="Thumbnail 3" />
-                                </div>
+                            </div>
+                            <button class="catalog-next">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <rect y="20" width="20" height="20" rx="4" transform="rotate(-90 0 20)"
+                                        fill="#EEEEEE" />
+                                    <path d="M13.125 9L10 11.5L6.875 9" stroke="#1010F6" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </button>
                             </div>
                         </div>
                         <div class="catalog-product__col">
@@ -390,21 +422,24 @@
                                 <h3 class="catalog-product__title">3. Выберите цвет свечения</h3>
                                 <ul class="catalog-product__checkbox-list">
                                     <li class="catalog-product__checkbox-item">
-                                        <input type="radio" id="checkbox-1" name="color-group" class="catalog-product__checkbox-input" />
+                                        <input type="radio" id="checkbox-1" name="color-group"
+                                            class="catalog-product__checkbox-input" />
                                         <label for="checkbox-1" class="catalog-product__checkbox-label">
                                             <span class="catalog-product__checkbox-icon"></span>
                                         </label>
                                         <label class="catalog-product__checkbox-text" for="checkbox-1">Теплый</label>
                                     </li>
                                     <li class="catalog-product__checkbox-item">
-                                        <input type="radio" id="checkbox-2" name="color-group" class="catalog-product__checkbox-input" />
+                                        <input type="radio" id="checkbox-2" name="color-group"
+                                            class="catalog-product__checkbox-input" />
                                         <label for="checkbox-2" class="catalog-product__checkbox-label">
                                             <span class="catalog-product__checkbox-icon"></span>
                                         </label>
                                         <label class="catalog-product__checkbox-text" for="checkbox-2">Дневной</label>
                                     </li>
                                     <li class="catalog-product__checkbox-item">
-                                        <input type="radio" id="checkbox-3" name="color-group" class="catalog-product__checkbox-input" />
+                                        <input type="radio" id="checkbox-3" name="color-group"
+                                            class="catalog-product__checkbox-input" />
                                         <label for="checkbox-3" class="catalog-product__checkbox-label">
                                             <span class="catalog-product__checkbox-icon"></span>
                                         </label>
@@ -416,21 +451,24 @@
                                 <h3 class="catalog-product__title">4. Выберите угол сечения</h3>
                                 <ul class="catalog-product__checkbox-list">
                                     <li class="catalog-product__checkbox-item">
-                                        <input type="radio" id="checkbox-4" name="angle-group" class="catalog-product__checkbox-input" />
+                                        <input type="radio" id="checkbox-4" name="angle-group"
+                                            class="catalog-product__checkbox-input" />
                                         <label for="checkbox-4" class="catalog-product__checkbox-label">
                                             <span class="catalog-product__checkbox-icon"></span>
                                         </label>
                                         <label class="catalog-product__checkbox-text" for="checkbox-4">60</label>
                                     </li>
                                     <li class="catalog-product__checkbox-item">
-                                        <input type="radio" id="checkbox-5" name="angle-group" class="catalog-product__checkbox-input" />
+                                        <input type="radio" id="checkbox-5" name="angle-group"
+                                            class="catalog-product__checkbox-input" />
                                         <label for="checkbox-5" class="catalog-product__checkbox-label">
                                             <span class="catalog-product__checkbox-icon"></span>
                                         </label>
                                         <label class="catalog-product__checkbox-text" for="checkbox-5">70</label>
                                     </li>
                                     <li class="catalog-product__checkbox-item">
-                                        <input type="radio" id="checkbox-6" name="angle-group" class="catalog-product__checkbox-input" />
+                                        <input type="radio" id="checkbox-6" name="angle-group"
+                                            class="catalog-product__checkbox-input" />
                                         <label for="checkbox-6" class="catalog-product__checkbox-label">
                                             <span class="catalog-product__checkbox-icon"></span>
                                         </label>
@@ -442,22 +480,26 @@
                                 <h3 class="catalog-product__title">5. Выберите мощность</h3>
                                 <ul class="catalog-product__checkbox-list fd">
                                     <li class="catalog-product__checkbox-item">
-                                        <input type="radio" id="checkbox-7" name="power-group" class="catalog-product__checkbox-input" />
+                                        <input type="radio" id="checkbox-7" name="power-group"
+                                            class="catalog-product__checkbox-input" />
                                         <label for="checkbox-7" class="catalog-product__checkbox-label">
                                             <span class="catalog-product__checkbox-icon"></span>
                                         </label>
-                                        <label class="catalog-product__checkbox-text" for="checkbox-7">COB 12 Ватт</label>
+                                        <label class="catalog-product__checkbox-text" for="checkbox-7">COB 12
+                                            Ватт</label>
                                     </li>
                                     <li class="catalog-product__checkbox-item">
-                                        <input type="radio" id="checkbox-8" name="power-group" class="catalog-product__checkbox-input" />
+                                        <input type="radio" id="checkbox-8" name="power-group"
+                                            class="catalog-product__checkbox-input" />
                                         <label for="checkbox-8" class="catalog-product__checkbox-label">
                                             <span class="catalog-product__checkbox-icon"></span>
                                         </label>
-                                        <label class="catalog-product__checkbox-text" for="checkbox-8">COB 20 Ватт (+300.00 руб)</label>
+                                        <label class="catalog-product__checkbox-text" for="checkbox-8">COB 20 Ватт
+                                            (+300.00 руб)</label>
                                     </li>
                                 </ul>
                             </div>
-                            
+
                         </div>
                     </div>
                     <div class="catalog-product__form">
@@ -563,7 +605,7 @@
                     </ul>
                     <button class="_label-view">Показать</button>
                 </div>
-            </section>            
+            </section>
             <section class="tabs">
                 <div class="tabs__container">
                     <ul class="tabs__list">
