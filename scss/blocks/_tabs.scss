@@ -8,6 +8,7 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
         }
+
         @media (max-width: 600px) {
             grid-template-columns: repeat(1, 1fr);
         }
@@ -19,6 +20,7 @@
             cursor: pointer;
 
             font-family: var(--font-family);
+
             h4 {
                 font-weight: 500;
                 font-size: 20px;
@@ -76,12 +78,19 @@
             img {
                 width: 55px;
             }
+            @media (max-width: 768px) {
+                font-size: 20px;
+            }
         }
 
         &-item {
             margin-top: 40px;
             padding: 50px 40px;
             background: var(--fon);
+
+            @media (max-width: 768px) {
+                padding: 20px 10px;
+            }
 
             ul {
                 display: flex;
@@ -93,12 +102,18 @@
                 box-shadow: 0 0 10px 0 rgba(125, 125, 125, 0.15);
                 background: #fff;
                 padding: 40px;
+                @media (max-width: 768px) {
+                   padding: 20px;
+                }
 
                 h3 {
                     font-weight: 600;
                     font-size: 20px;
                     color: var(--siniy);
                     margin-bottom: 20px;
+                    @media (max-width: 768px) {
+                        font-size: 17px;
+                    }
                 }
 
                 p {
@@ -106,6 +121,10 @@
                     font-size: 18px;
                     line-height: 130%;
                     color: #a5a5a5;
+                    @media (max-width: 768px) {
+                        font-size: 15px;
+                    }
+
                     &:not(:last-child) {
                         margin-bottom: 20px;
                     }
@@ -116,6 +135,9 @@
         &-wrap {
             display: flex;
             gap: 30px;
+            @media (max-width: 768px) {
+                flex-direction: column-reverse;
+            }
 
             ul {
                 box-shadow: 0 0 10px 0 rgba(125, 125, 125, 0.15);
@@ -141,6 +163,9 @@
 
             form {
                 max-width: 58%;
+                @media (max-width: 768px) {
+                    max-width: 100%;
+                }
             }
         }
     }
