@@ -138,6 +138,11 @@ document.addEventListener('DOMContentLoaded', () => {
     function showTab(index) {
         tabsContent[index].style.display = 'block';
         tabs[index].classList.add('active');
+        // Прокрутка к открытому блоку
+        tabsContent[index].scrollIntoView({
+            behavior: 'smooth', // плавная прокрутка
+            block: 'start' // выравнивание по верхнему краю экрана
+        });
     }
 
     // Инициализация: скрываем все табы и показываем первый
@@ -150,6 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
             showTab(index);
         });
     });
+
 });
 function maskPhone(selector, masked = '+7 (___) ___-__-__') {
     const elems = document.querySelectorAll(selector);

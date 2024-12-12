@@ -1505,7 +1505,9 @@ section {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 37px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 17px;
 }
 .contacts__list li {
   -webkit-box-flex: 1;
@@ -1564,7 +1566,6 @@ section {
 .contacts__label p {
   font-size: 16px;
   color: var(--teks);
-  max-width: 322px;
 }
 .contacts__label .time {
   font-size: 20px;
@@ -1606,6 +1607,39 @@ section {
   color: #a5a5a5;
 }
 
+@media (max-width: 768px) {
+  .contacts__label {
+    gap: 20px;
+  }
+  .contacts__label .time {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .contacts__label p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 450px) {
+  .contacts__label {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contacts__label p {
+    text-align: center;
+  }
+  .contacts__label p br {
+    display: none;
+  }
+  .contacts__label .time {
+    text-align: center;
+  }
+}
 .services {
   background: var(--fon);
   padding: 5vw 0;

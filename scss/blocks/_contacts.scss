@@ -6,7 +6,8 @@
         margin-bottom: 30px;
         display: flex;
         justify-content: space-between;
-        gap: 37px;
+        flex-wrap: wrap;
+        gap: 17px;
 
         li {
             flex: auto;
@@ -67,7 +68,6 @@
         p {
             font-size: 16px;
             color: var(--teks);
-            max-width: 322px;
         }
 
         .time {
@@ -106,6 +106,34 @@
                 line-height: 130%;
                 color: #a5a5a5;
             }
+        }
+    }
+}
+@media (max-width: 768px) {
+    .contacts__label {
+        gap: 20px;
+    }
+    .contacts__label .time {
+        font-size: 14px;
+    }
+}
+@media (max-width: 768px) {
+    .contacts__label p {
+        font-size: 14px;
+    }
+}
+@media (max-width: 450px) {
+    .contacts__label {
+        flex-direction: column;
+        align-items: center;
+        p {
+            br {
+                display: none;
+            }
+            text-align: center;
+        }
+        .time {
+            text-align: center;
         }
     }
 }
